@@ -3,16 +3,16 @@ import "./App.css";
 import "./invite-extra.css";
 import "./book.css";
 
-import foto1 from "./assets/photos/1.jpg";
-import foto2 from "./assets/photos/2.jpg";
-import foto3 from "./assets/photos/3.jpg";
-import foto4 from "./assets/photos/4.jpg";
-import foto5 from "./assets/photos/5.jpg";
+// import foto1 from "./assets/photos/1.jpg";
+// import foto2 from "./assets/photos/2.jpg";
+// import foto3 from "./assets/photos/3.jpg";
+// import foto4 from "./assets/photos/4.jpg";
+// import foto5 from "./assets/photos/5.jpg";
 
 // To'yxona suratlari: src/assets/venue/ papkasiga 1.jpg ... 4.jpg qo'ying
 import venue1 from "./assets/venue/1.jpg";
-import venue2 from "./assets/venue/2.jpg";
-import venue3 from "./assets/venue/3.jpg";
+// import venue2 from "./assets/venue/2.jpg";
+// import venue3 from "./assets/venue/3.jpg";
 
 // ====== Taklifnoma ma'lumotlarini shu yerdan o'zgartiring ======
 const INVITE = {
@@ -33,32 +33,32 @@ const INVITE = {
 };
 
 // ====== Suratlar va izohlar ======
-const HERO = {
-  src: foto5,
-  alt: `${INVITE.groom} va ${INVITE.bride}`,
-  caption: "Endi hamisha birga",
-};
+// const HERO = {
+//   src: foto5,
+//   alt: `${INVITE.groom} va ${INVITE.bride}`,
+//   caption: "Endi hamisha birga",
+// };
 
-const MOMENTS = [
-  {
-    src: foto1,
-    cap: "Ikki yurak, bitta taqdir",
-    alt: "Kelin-kuyov quchoqlashib turibdi",
-  },
-  { src: foto3, cap: "Baxt satrlari", alt: "Kelin guvohnomaga qarab turibdi" },
-  { src: foto2, cap: "Qalbdagi va'da", alt: "Kelin-kuyov guldasta bilan" },
-  {
-    src: foto4,
-    cap: "Gullar ichida sevgi",
-    alt: "Kelin kuyovning yelkasiga qo'lini qo'ygan",
-  },
-];
+// const MOMENTS = [
+//   {
+//     src: foto1,
+//     cap: "Ikki yurak, bitta taqdir",
+//     alt: "Kelin-kuyov quchoqlashib turibdi",
+//   },
+//   { src: foto3, cap: "Baxt satrlari", alt: "Kelin guvohnomaga qarab turibdi" },
+//   { src: foto2, cap: "Qalbdagi va'da", alt: "Kelin-kuyov guldasta bilan" },
+//   {
+//     src: foto4,
+//     cap: "Gullar ichida sevgi",
+//     alt: "Kelin kuyovning yelkasiga qo'lini qo'ygan",
+//   },
+// ];
 
 // ====== To'yxona ======
 const VENUE_PHOTOS = [
   { src: venue1, cap: "Tantana zali", alt: "To'yxona zali" },
-  { src: venue2, cap: "Bezatilgan stollar", alt: "To'yxona stollari" },
-  { src: venue3, cap: "Kirish qismi", alt: "To'yxona kirish qismi" },
+  // { src: venue2, cap: "Bezatilgan stollar", alt: "To'yxona stollari" },
+  // { src: venue3, cap: "Kirish qismi", alt: "To'yxona kirish qismi" },
 ];
 
 const OPEN_DELAY = 1400;
@@ -348,41 +348,41 @@ function ClosingPage() {
 
 /* Har bir surat — alohida sahifa */
 
-const SPARKS = [
-  [6, 10, 0],
-  [92, 4, 0.8],
-  [-2, 46, 1.6],
-  [100, 54, 0.4],
-  [8, 88, 1.2],
-  [94, 94, 2],
-];
+// const SPARKS = [
+//   [6, 10, 0],
+//   [92, 4, 0.8],
+//   [-2, 46, 1.6],
+//   [100, 54, 0.4],
+//   [8, 88, 1.2],
+//   [94, 94, 2],
+// ];
 
-function HeroPage({ active, onZoom }) {
-  return (
-    <div className="photo-page">
-      <p className="photo-kicker reveal" style={{ "--i": 0 }}>
-        Bizning hikoyamiz
-      </p>
-      <div className={`arch-wrap ${active ? "in" : ""}`}>
-        {SPARKS.map(([x, y, d], k) => (
-          <i
-            key={k}
-            className="spark"
-            style={{ left: `${x}%`, top: `${y}%`, animationDelay: `${d}s` }}
-          />
-        ))}
-        <div className="arch" onClick={() => onZoom(HERO)}>
-          <div className="arch-in">
-            <img src={HERO.src} alt={HERO.alt} />
-          </div>
-        </div>
-      </div>
-      <p className="photo-cap reveal" style={{ "--i": 2 }}>
-        {HERO.caption}
-      </p>
-    </div>
-  );
-}
+// function HeroPage({ active, onZoom }) {
+//   return (
+//     <div className="photo-page">
+//       <p className="photo-kicker reveal" style={{ "--i": 0 }}>
+//         Bizning hikoyamiz
+//       </p>
+//       <div className={`arch-wrap ${active ? "in" : ""}`}>
+//         {SPARKS.map(([x, y, d], k) => (
+//           <i
+//             key={k}
+//             className="spark"
+//             style={{ left: `${x}%`, top: `${y}%`, animationDelay: `${d}s` }}
+//           />
+//         ))}
+//         <div className="arch" onClick={() => onZoom(HERO)}>
+//           <div className="arch-in">
+//             <img src={HERO.src} alt={HERO.alt} />
+//           </div>
+//         </div>
+//       </div>
+//       <p className="photo-cap reveal" style={{ "--i": 2 }}>
+//         {HERO.caption}
+//       </p>
+//     </div>
+//   );
+// }
 
 function PhotoPage({ item, label, onZoom }) {
   return (
@@ -408,22 +408,22 @@ function PhotoPage({ item, label, onZoom }) {
 
 /* Video sahifa: butun sahifani egallaydi (9:16) */
 
-function VideoPage({ active }) {
-  const ref = useRef(null);
-  const [playing, setPlaying] = useState(false);
+// function VideoPage({ active }) {
+//   const ref = useRef(null);
+//   const [playing, setPlaying] = useState(false);
 
-  // Sahifadan chiqilsa video to'xtaydi
-  useEffect(() => {
-    if (!active && ref.current) ref.current.pause();
-  }, [active]);
+//   // Sahifadan chiqilsa video to'xtaydi
+//   useEffect(() => {
+//     if (!active && ref.current) ref.current.pause();
+//   }, [active]);
 
-  const toggle = () => {
-    const v = ref.current;
-    if (!v) return;
-    if (v.paused) v.play().catch(() => {});
-    else v.pause();
-  };
-}
+//   const toggle = () => {
+//     const v = ref.current;
+//     if (!v) return;
+//     if (v.paused) v.play().catch(() => {});
+//     else v.pause();
+//   };
+// }
 
 /* ---------- Kitob ---------- */
 
@@ -437,11 +437,11 @@ function Book({ onZoom }) {
     { key: "intro", ornate: true, render: () => <IntroPage /> },
     { key: "date", ornate: true, render: () => <DatePage /> },
     { key: "details", ornate: true, render: () => <DetailsPage /> },
-    { key: "hero", render: (a) => <HeroPage active={a} onZoom={onZoom} /> },
-    ...MOMENTS.map((m, i) => ({
-      key: `m${i}`,
-      render: () => <PhotoPage item={m} onZoom={onZoom} />,
-    })),
+    // { key: "hero", render: (a) => <HeroPage active={a} onZoom={onZoom} /> },
+    // ...MOMENTS.map((m, i) => ({
+    //   key: `m${i}`,
+    //   render: () => <PhotoPage item={m} onZoom={onZoom} />,
+    // })),
     ...VENUE_PHOTOS.map((v, i) => ({
       key: `v${i}`,
       render: () => (
